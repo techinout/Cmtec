@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <style>
+        .password-container {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .password-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .password-toggle-container {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+        .password-toggle-container i {
+            cursor: pointer;
+            color: #333;
+            margin-right: 10px;
+        }
+        .password-toggle-container p {
+            margin: 0;
+            color: #333;
+        }
+        img{
+            height :100px;
+            width:100px;
+            background-color: #3E5FFE;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-in">
+            <form action="validarLogin.php" method="post">
+                <img src="../cmtec_semFundo.png" height="200px" width="200px">
+                <h2 style="margin-bottom: 10px;">Administração</h2>
+                <input type="text" name="username" placeholder="Email" required>
+                <div class="password-container">
+                    <input type="password" id="sign-in-password" name="password" placeholder="Senha" required>
+                    <div class="password-toggle-container">
+                        <i class="toggle-password fas fa-eye" onclick="togglePassword()"></i>
+                        <p>Mostrar sua senha</p>
+                    </div>
+                </div>
+                <button type="submit">entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById('sign-in-password');
+            var passwordToggle = document.querySelector('.toggle-password');
+        
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                passwordToggle.classList.remove('fa-eye');
+                passwordToggle.classList.add('fa-eye-slash');
+            } else {
+                passwordField.type = 'password';
+                passwordToggle.classList.remove('fa-eye-slash');
+                passwordToggle.classList.add('fa-eye');
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+
+/* Estilo para a tabela de usuários */
+.table-wrapper {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.table-title {
+    padding-bottom: 15px;
+    color: #fff;
+    padding: 16px 30px;
+    margin: -20px -20px 10px;
+    border-radius: 8px 8px 0 0;
+}
+
+.table thead th {
+    background-color: #00a1ff;
+    color: #fff;
+    border: none;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #ddd;
+}
+
+.table tbody td {
+    vertical-align: middle;
+}
+
+/* Botões de Ação */
+.table .material-icons {
+    font-size: 25px;
+}
+
+.hint-text {
+    font-size: 15px;
+    margin-top: 10px;
+    color: #000000;
+}
+
+/* Estilo para os botões de ação */
+/* Estilo para os botões de ação */
+.table tbody .actions a {
+    margin-right: 10px;
+}
+
+.table tbody .actions a.fa-edit {
+    color: #747474 !important; /* Cor do botão de edição (amarelo) */
+}
+
+.table tbody .actions a.fa-trash {
+    color: #dc3545 !important; /* Cor do botão de exclusão (vermelho) */
+}
+
+
